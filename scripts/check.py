@@ -16,6 +16,13 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 BASE = "https://weifengpy.github.io"
+
+# Redirect pages: built path -> the canonical target the page must point at.
+# /posts/ exists only to redirect to the front page (GitHub Pages has no
+# server-side 301), so it is exempt from exactly two rules: self-referential
+# canonical and sitemap coverage (and it must NOT appear in the sitemap).
+# Every other check below still applies to it in full.
+REDIRECTS = {"posts/index.html": f"{BASE}/"}
 pub = Path(sys.argv[1] if len(sys.argv) > 1 else "public")
 errors = []
 warnings = []
@@ -53,6 +60,9 @@ for f in html_files:
     m = re.search(r'<link\s+rel="?canonical"?\s+href="?([^"\s>]+)"?', text)
     if not m:
         errors.append(f"{rel}: missing canonical link")
+    elif rel in REDIRECTS:
+        if m.group(1) != REDIRECTS[rel]:
+            errors.append(f"{rel}: redirect canonical {m.group(1)} != target {REDIRECTS[rel]}")
     elif m.group(1) != url:
         errors.append(f"{rel}: canonical {m.group(1)} != own URL {url}")
 
@@ -95,6 +105,10 @@ else:
         if rel == "404.html":
             continue
         u = url_for(f)
+        if rel in REDIRECTS:
+            if u in locs:
+                errors.append(f"sitemap.xml lists redirect page {u}")
+            continue
         if u not in locs:
             errors.append(f"sitemap.xml does not list {u}")
 

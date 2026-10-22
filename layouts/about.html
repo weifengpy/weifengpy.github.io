@@ -6,21 +6,6 @@
   {{ .Content }}
 </article>
 
-{{ with hugo.Data.projects }}
-<section class="card" id="projects">
-  <h2>Projects</h2>
-  <ul class="entries">
-    {{ range . }}
-    <li>
-      {{ if .link }}<strong><a href="{{ .link }}">{{ .name.en }}</a></strong>{{ else }}<strong>{{ .name.en }}</strong>{{ end }}
-      {{ with .time }}<span class="when">{{ . }}</span>{{ end }}
-      {{ with .description.en }}<p>{{ . }}</p>{{ end }}
-    </li>
-    {{ end }}
-  </ul>
-</section>
-{{ end }}
-
 {{ with hugo.Data.experiences }}
 <section class="card" id="experience">
   <h2>Experience</h2>

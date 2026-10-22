@@ -50,7 +50,7 @@ supplies the fields. Required:
 
 ## About-page data
 
-- About-page cards render from `data/projects.yaml`, `publications.yaml`,
+- About-page cards render from `data/publications.yaml,
   `experiences.yaml`, `awards.yaml`. Update the YAML, not the template.
 - Text fields are `{en, zh}` maps. v1 renders `en` only and renders it as
   complete HTML (crawler constraint); `zh` may be filled ahead of a
