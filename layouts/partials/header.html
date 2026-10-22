@@ -4,6 +4,8 @@
     <ul>
       <li><a href="{{ "/" | relURL }}">Posts</a></li>
       <li><a href="{{ "/about/" | relURL }}">About</a></li>
+      <li><button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to dark theme">&#9790; Dark</button></li>
     </ul>
+    <script>(function(){var b=document.getElementById("theme-toggle");function label(){var dark=document.documentElement.dataset.theme==="dark";b.innerHTML=dark?"&#9728; Light":"&#9790; Dark";b.setAttribute("aria-label",dark?"Switch to light theme":"Switch to dark theme")}label();b.addEventListener("click",function(){if(window.__themeToggle){window.__themeToggle();label()}})})();</script>
   </nav>
 </header>

@@ -62,23 +62,33 @@ builds the site, runs the SEO gate, and deploys to GitHub Pages
 
 ## Color themes
 
-The site ships a light and a dark theme, chosen automatically - there is
-no manual toggle. The rule:
+The site ships a light and a dark theme. The default choice is
+automatic, and a toggle button in the header (right of "About")
+overrides it. The rule:
 
-- With JavaScript, a tiny inline script in `<head>` sets `data-theme` on
-  `<html>` from the **visitor's local time** before first paint: light
-  from 07:00 to 18:59, dark from 19:00 to 06:59. While a page stays open
-  it re-checks at the next 07:00 / 19:00 boundary and switches live.
+- **A manual choice wins.** The toggle's label names the theme it will
+  switch to. Clicking it flips the theme at once and stores the choice
+  in `localStorage` under the key `theme`; the choice survives reloads
+  and navigation, and the automatic boundary re-checks never override
+  it. To return to automatic, clear that key (for example run
+  `localStorage.removeItem("theme")` in the browser console) and reload.
+- Otherwise, with JavaScript, a tiny inline script in `<head>` sets
+  `data-theme` on `<html>` from the **visitor's local time** before
+  first paint: light from 07:00 to 18:59, dark from 19:00 to 06:59.
+  While a page stays open it re-checks at the next 07:00 / 19:00
+  boundary and switches live.
 - Without JavaScript, CSS falls back to the **device preference**
-  (`@media (prefers-color-scheme: dark)`).
-- If the two signals disagree, **time wins** (it is the more dynamic of
-  the two signals). To change the hours, edit the `pick()` function in
-  `layouts/partials/head.html`.
+  (`@media (prefers-color-scheme: dark)`); the toggle button is then
+  inert.
+- If the time and device signals disagree, **time wins** (it is the
+  more dynamic of the two signals). To change the hours, edit the
+  `pick()` function in `layouts/partials/head.html`.
 
 Both palettes live in `assets/css/main.css` as CSS variables on `:root`
 (light) and `:root[data-theme="dark"]`; both meet WCAG AA contrast for
-body text and links (at least 4.5:1). `meta theme-color` is emitted per
-scheme in `layouts/partials/head.html`.
+body text and links (at least 4.5:1). `meta theme-color` starts per-scheme in
+`layouts/partials/head.html`; the inline script re-points it at the
+active theme whenever the theme is applied or toggled.
 
 ## Writing a post
 
