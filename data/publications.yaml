@@ -8,8 +8,11 @@
 #   venue:   { en: "Conf 2026", zh: "" }
 #   date:    "2026"
 #   links:                                     # optional, only confirmed URLs
-#     paper: "https://..."
+#     pdf:   "https://..."   # direct PDF (rendered as "PDF")
+#     paper: "https://..."   # landing page (rendered as "Paper")
 #     code:  "https://..."
+# Links added 2026-10-22: every URL below was fetched and verified live
+# (PDFs: HTTP 200 + PDF content; DOIs: registered metadata + resolution).
 #   image:   "/img/publications/example.png"   # optional teaser
 - title:
     en: "TorchTitan: One-stop PyTorch Native Solution for Production Ready LLM Pre-training"
@@ -18,6 +21,9 @@
     en: "ICLR 2025"
     zh: ""
   date: "2025"
+  links:
+    pdf: "https://arxiv.org/pdf/2410.06511"
+
 - title:
     en: "Dynamically Pruned Message Passing Networks for Large-Scale Knowledge Graph Reasoning"
     zh: ""
@@ -26,6 +32,9 @@
     en: "ICLR 2020"
     zh: ""
   date: "2020"
+  links:
+    pdf: "https://arxiv.org/pdf/1909.11334"
+
 - title:
     en: "Neural Consciousness Flow"
     zh: ""
@@ -34,6 +43,9 @@
     en: ""
     zh: ""
   date: "2019"
+  links:
+    pdf: "https://arxiv.org/pdf/1905.13049"
+
 - title:
     en: "Backprop-Q: Generalized Backpropagation for Stochastic Computation Graphs"
     zh: ""
@@ -42,6 +54,9 @@
     en: "NeurIPS 2018 Deep Reinforcement Learning Workshop"
     zh: ""
   date: "2018"
+  links:
+    pdf: "https://arxiv.org/pdf/1807.09511"
+
 - title:
     en: "Modeling Attention Flow on Graphs"
     zh: ""
@@ -50,6 +65,9 @@
     en: "NeurIPS 2018 Relational Representation Learning Workshop"
     zh: ""
   date: "2018"
+  links:
+    pdf: "https://arxiv.org/pdf/1811.00497"
+
 - title:
     en: "StreamCube: Hierarchical Spatio-temporal Hashtag Clustering for Event Exploration over the Twitter Stream"
     zh: ""
@@ -58,6 +76,9 @@
     en: "ICDE 2015"
     zh: ""
   date: "2015"
+  links:
+    pdf: "http://chaozhang.org/papers/2015-icde-stream-cube.pdf"
+
 - title:
     en: "We Can Learn Your #Hashtags: Connecting Tweets to Explicit Topics"
     zh: ""
@@ -66,6 +87,9 @@
     en: "ICDE 2014"
     zh: ""
   date: "2014"
+  links:
+    paper: "https://doi.org/10.1109/icde.2014.6816706"
+
 - title:
     en: "Combining Latent Factor Model with Location Features for Event-based Group Recommendation"
     zh: ""
@@ -74,6 +98,9 @@
     en: "KDD 2013"
     zh: ""
   date: "2013"
+  links:
+    paper: "https://doi.org/10.1145/2487575.2487646"
+
 - title:
     en: "Integrating Semantic Relatedness and Words' Intrinsic Features for Keyword Extraction"
     zh: ""
@@ -82,6 +109,9 @@
     en: "IJCAI 2013"
     zh: ""
   date: "2013"
+  links:
+    pdf: "https://www.ijcai.org/Proceedings/13/Papers/328.pdf"
+
 - title:
     en: "Learning to Annotate Tweets with Crowd Wisdom"
     zh: ""
@@ -90,6 +120,9 @@
     en: "WWW 2013 (Poster)"
     zh: ""
   date: "2013"
+  links:
+    paper: "https://doi.org/10.1145/2487788.2487810"
+
 - title:
     en: "Retweet or Not? Personalized Tweet Re-ranking"
     zh: ""
@@ -98,6 +131,9 @@
     en: "WSDM 2013"
     zh: ""
   date: "2013"
+  links:
+    paper: "https://doi.org/10.1145/2433396.2433470"
+
 - title:
     en: "Incorporating Heterogeneous Information for Personalized Tag Recommendation in Social Tagging Systems"
     zh: ""
@@ -106,6 +142,9 @@
     en: "KDD 2012"
     zh: ""
   date: "2012"
+  links:
+    paper: "https://doi.org/10.1145/2339530.2339729"
+
 - title:
     en: "HeterRank: Addressing Information Heterogeneity for Personalized Recommendation in Social Tagging Systems"
     zh: ""
@@ -114,3 +153,5 @@
     en: "WWW 2012 (Poster)"
     zh: ""
   date: "2012"
+  links:
+    paper: "https://doi.org/10.1145/2187980.2188096"
