@@ -3,7 +3,6 @@ title: "Welcome"
 date: 2026-10-21
 slug: "welcome"
 description: "A first post: what this site is for — notes on compilers, LLM inference, and computer architecture."
-tags: ["meta"]
 draft: false
 ---
 
