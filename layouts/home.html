@@ -8,7 +8,7 @@
     <a href="{{ "/posts/" | relURL }}">Posts</a></p>
 </section>
 
-{{ with .Site.Data.experiences }}
+{{ with hugo.Data.experiences }}
 <section class="card" id="experience">
   <h2>Experience</h2>
   <ul class="entries">
@@ -23,7 +23,7 @@
 </section>
 {{ end }}
 
-{{ with .Site.Data.publications }}
+{{ with hugo.Data.publications }}
 <section class="card" id="publications">
   <h2>Publications</h2>
   <ul class="entries">
@@ -42,7 +42,7 @@
 </section>
 {{ end }}
 
-{{ with .Site.Data.awards }}
+{{ with hugo.Data.awards }}
 <section class="card" id="awards">
   <h2>Awards</h2>
   <ul class="entries">
@@ -54,7 +54,7 @@
 </section>
 {{ end }}
 
-{{ with .Site.Data.projects }}
+{{ with hugo.Data.projects }}
 <section class="card" id="projects">
   <h2>Projects</h2>
   <ul class="entries">

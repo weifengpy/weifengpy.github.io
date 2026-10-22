@@ -27,6 +27,8 @@ if not html_files:
 
 def url_for(path: Path) -> str:
     rel = path.relative_to(pub).as_posix()
+    if rel == "index.html":
+        return f"{BASE}/"
     if rel.endswith("/index.html"):
         rel = rel[: -len("index.html")]
     return f"{BASE}/{rel}"
@@ -38,7 +40,8 @@ for f in html_files:
     url = url_for(f)
     rel = f.relative_to(pub).as_posix()
 
-    m = re.search(r'<meta name="description" content="([^"]*)"', text)
+    # note: hugo --minify strips attribute quotes where legal, so quotes are optional below
+    m = re.search(r'<meta\s+name="?description"?\s+content="([^"]*)"', text)
     if not m or not m.group(1).strip():
         errors.append(f"{rel}: missing or empty meta description")
     else:
@@ -47,19 +50,19 @@ for f in html_files:
             errors.append(f"{rel}: duplicate description also used by {descriptions[d]}")
         descriptions[d] = rel
 
-    m = re.search(r'<link rel="canonical" href="([^"]+)"', text)
+    m = re.search(r'<link\s+rel="?canonical"?\s+href="?([^"\s>]+)"?', text)
     if not m:
         errors.append(f"{rel}: missing canonical link")
     elif m.group(1) != url:
         errors.append(f"{rel}: canonical {m.group(1)} != own URL {url}")
 
     for img in re.findall(r"<img\b[^>]*>", text):
-        if not re.search(r'\balt="[^"]+"', img):
+        if not re.search(r'\balt=(?:"[^"]+"|[^\s>]+)', img):
             errors.append(f"{rel}: <img> without non-empty alt: {img[:80]}")
-        if not re.search(r'\bwidth="\d+"', img) or not re.search(r'\bheight="\d+"', img):
+        if not re.search(r'\bwidth="?(\d+)', img) or not re.search(r'\bheight="?(\d+)', img):
             errors.append(f"{rel}: <img> without width/height: {img[:80]}")
 
-    for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', text, re.S):
+    for block in re.findall(r'<script\s+type="?application/ld\+json"?>(.*?)</script>', text, re.S):
         try:
             json.loads(block)
             jsonld_pages.add(rel)

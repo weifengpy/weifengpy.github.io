@@ -5,7 +5,7 @@
     <title>{{ .Site.Title }}</title>
     <link>{{ .Site.BaseURL }}</link>
     <description>{{ .Site.Params.description }}</description>
-    <language>{{ .Site.Language.LanguageCode }}</language>
+    <language>{{ .Site.Language.Locale }}</language>
     <atom:link href="{{ "index.xml" | absURL }}" rel="self" type="application/rss+xml" />
     {{ range $pages }}
     <item>

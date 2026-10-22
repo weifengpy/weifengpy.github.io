@@ -7,6 +7,9 @@
 {{- else if .Title -}}
   {{- $title = printf "%s | %s" .Title .Site.Title -}}
 {{- end -}}
+{{- if eq .Kind "404" -}}
+  {{- $title = printf "404 — page not found | %s" .Site.Title -}}
+{{- end -}}
 <title>{{ $title }}</title>
 {{- $desc := .Site.Params.description -}}
 {{- if .Description -}}
@@ -17,6 +20,9 @@
   {{- $desc = printf "All tags used on %s." .Site.Title -}}
 {{- else if .IsPage -}}
   {{- $desc = .Summary | plainify | truncate 160 -}}
+{{- end -}}
+{{- if eq .Kind "404" -}}
+  {{- $desc = "The requested page was not found on this site." -}}
 {{- end -}}
 <meta name="description" content="{{ $desc }}">
 <meta name="author" content="{{ .Site.Params.author }}">
