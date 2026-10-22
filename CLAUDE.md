@@ -32,7 +32,7 @@ supplies the fields. Required:
 - Exactly one `#` (h1) per page — the template renders the title as the
   h1, so start body headings at `##` and do not skip levels.
 - Every post links to **at least two** other pages on this site
-  (related older post, About, a project anchor). When a new post
+  (related older post, About, an Experience or Publications anchor). When a new post
   supersedes an old one, add a backlink in the old post too.
 - Numbers and claims carry their sources (links), as in the rest of the
   owner's work.
