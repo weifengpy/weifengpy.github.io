@@ -8,8 +8,8 @@ draft: false
 ---
 
 This site is a combined homepage and blog: the front page is the post
-list, and this is where I will write up notes as I go. More about me and
-my projects lives on the [About page](/about/).
+list, and this is where I will write up notes as I go. More about me — my experience and publications — lives on the
+[About page](/about/).
 
 Expect three recurring themes:
 
