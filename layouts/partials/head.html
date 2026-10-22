@@ -28,7 +28,13 @@
 <meta name="author" content="{{ .Site.Params.author }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101418">
+{{/* Theme: set data-theme before first paint from the visitor's local time
+     (light 07:00-18:59, dark 19:00-06:59); re-checks at the next boundary
+     while the page stays open. Without JS, CSS falls back to the device's
+     prefers-color-scheme. See README "Color themes". */}}
+<script>(function(){function pick(){var h=new Date().getHours();return h>=7&&h<19?"light":"dark"}function apply(){document.documentElement.dataset.theme=pick()}function arm(){var n=new Date(),b=new Date(n.getTime());if(n.getHours()<7){b.setHours(7,0,0,0)}else if(n.getHours()<19){b.setHours(19,0,0,0)}else{b.setHours(31,0,0,0)}setTimeout(function(){apply();arm()},b-n+250)}apply();arm()})();</script>
 {{/* Open Graph */}}
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:title" content="{{ $title }}">

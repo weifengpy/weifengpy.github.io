@@ -60,6 +60,26 @@ builds the site, runs the SEO gate, and deploys to GitHub Pages
 | `CLAUDE.md` | Writing rules for posts (front matter, links, images) |
 | `archetypes/default.md` | `hugo new posts/<year>/<name>.md` template |
 
+## Color themes
+
+The site ships a light and a dark theme, chosen automatically - there is
+no manual toggle. The rule:
+
+- With JavaScript, a tiny inline script in `<head>` sets `data-theme` on
+  `<html>` from the **visitor's local time** before first paint: light
+  from 07:00 to 18:59, dark from 19:00 to 06:59. While a page stays open
+  it re-checks at the next 07:00 / 19:00 boundary and switches live.
+- Without JavaScript, CSS falls back to the **device preference**
+  (`@media (prefers-color-scheme: dark)`).
+- If the two signals disagree, **time wins** (it is the more dynamic of
+  the two signals). To change the hours, edit the `pick()` function in
+  `layouts/partials/head.html`.
+
+Both palettes live in `assets/css/main.css` as CSS variables on `:root`
+(light) and `:root[data-theme="dark"]`; both meet WCAG AA contrast for
+body text and links (at least 4.5:1). `meta theme-color` is emitted per
+scheme in `layouts/partials/head.html`.
+
 ## Writing a post
 
 ```sh

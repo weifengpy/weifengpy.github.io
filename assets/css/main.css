@@ -4,6 +4,8 @@
   --line: #ddd;
   --accent: #0b5394;
   --bg: #fff;
+  --code-bg: #f7f7f7;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 body {
@@ -19,6 +21,8 @@ body {
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+/* Links inside prose are underlined so they do not rely on color alone. */
+p a { text-decoration: underline; text-underline-offset: 0.15em; }
 .site-header nav {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 1rem;
   padding: 1rem 0; border-bottom: 1px solid var(--line);
@@ -44,6 +48,7 @@ main { padding-top: 1.5rem; }
 .post-meta { color: var(--muted); font-size: 0.95rem; }
 article img { max-width: 100%; height: auto; }
 pre {
+  background: var(--code-bg);
   overflow-x: auto; padding: 0.9rem 1rem; border: 1px solid var(--line);
   border-radius: 6px; font-size: 0.92rem; line-height: 1.5;
 }
@@ -129,3 +134,59 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 /* GenericOutput */ .chroma .go { color:#1f2328 }
 /* GenericUnderline */ .chroma .gl { text-decoration:underline }
 /* TextWhitespace */ .chroma .w { color:#fff }
+
+/* ---- Dark theme -------------------------------------------------------
+   The inline script in <head> sets data-theme from the visitor's local
+   time (light 07:00-18:59, dark 19:00-06:59). Without JS, the device
+   preference decides via the media query below. When both are present,
+   the time-based data-theme wins: the media blocks only apply when no
+   explicit light theme was set by the script. */
+:root[data-theme="dark"] {
+  --fg: #e8eaed;
+  --muted: #9aa3ad;
+  --line: #2e343b;
+  --accent: #8ab4f8;
+  --bg: #101418;
+  --code-bg: #171b20;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fg: #e8eaed;
+    --muted: #9aa3ad;
+    --line: #2e343b;
+    --accent: #8ab4f8;
+    --bg: #101418;
+    --code-bg: #171b20;
+    color-scheme: dark;
+  }
+}
+/* Chroma (github style above) dark overrides, github-dark palette. */
+:root[data-theme="dark"] .bg, :root[data-theme="dark"] .chroma { background-color: var(--code-bg); color: var(--fg); }
+:root[data-theme="dark"] .chroma .hl { background-color: #2d333b; }
+:root[data-theme="dark"] .chroma .lnt, :root[data-theme="dark"] .chroma .ln { color: #768390; }
+:root[data-theme="dark"] .chroma .k, :root[data-theme="dark"] .chroma .kc, :root[data-theme="dark"] .chroma .kd, :root[data-theme="dark"] .chroma .kn, :root[data-theme="dark"] .chroma .kp, :root[data-theme="dark"] .chroma .kr, :root[data-theme="dark"] .chroma .kt, :root[data-theme="dark"] .chroma .nl { color: #f47067; }
+:root[data-theme="dark"] .chroma .s, :root[data-theme="dark"] .chroma .sa, :root[data-theme="dark"] .chroma .sb, :root[data-theme="dark"] .chroma .sc, :root[data-theme="dark"] .chroma .dl, :root[data-theme="dark"] .chroma .sd, :root[data-theme="dark"] .chroma .s2, :root[data-theme="dark"] .chroma .se, :root[data-theme="dark"] .chroma .sh, :root[data-theme="dark"] .chroma .si, :root[data-theme="dark"] .chroma .sx, :root[data-theme="dark"] .chroma .sr, :root[data-theme="dark"] .chroma .s1, :root[data-theme="dark"] .chroma .ss { color: #96d0ff; }
+:root[data-theme="dark"] .chroma .m, :root[data-theme="dark"] .chroma .mb, :root[data-theme="dark"] .chroma .mf, :root[data-theme="dark"] .chroma .mh, :root[data-theme="dark"] .chroma .mi, :root[data-theme="dark"] .chroma .il, :root[data-theme="dark"] .chroma .mo, :root[data-theme="dark"] .chroma .no, :root[data-theme="dark"] .chroma .nd, :root[data-theme="dark"] .chroma .nt { color: #6cb6ff; }
+:root[data-theme="dark"] .chroma .na, :root[data-theme="dark"] .chroma .nc, :root[data-theme="dark"] .chroma .nn, :root[data-theme="dark"] .chroma .nx, :root[data-theme="dark"] .chroma .ge, :root[data-theme="dark"] .chroma .go, :root[data-theme="dark"] .chroma .p, :root[data-theme="dark"] .chroma .o, :root[data-theme="dark"] .chroma .ow, :root[data-theme="dark"] .chroma .or, :root[data-theme="dark"] .chroma .w { color: #e6edf3; }
+:root[data-theme="dark"] .chroma .ni, :root[data-theme="dark"] .chroma .nb, :root[data-theme="dark"] .chroma .nf, :root[data-theme="dark"] .chroma .fm { color: #dcbdfb; }
+:root[data-theme="dark"] .chroma .nv, :root[data-theme="dark"] .chroma .vc, :root[data-theme="dark"] .chroma .vg, :root[data-theme="dark"] .chroma .vi, :root[data-theme="dark"] .chroma .vm { color: #f69d50; }
+:root[data-theme="dark"] .chroma .c, :root[data-theme="dark"] .chroma .ch, :root[data-theme="dark"] .chroma .cm, :root[data-theme="dark"] .chroma .c1, :root[data-theme="dark"] .chroma .cs, :root[data-theme="dark"] .chroma .cp, :root[data-theme="dark"] .chroma .cpf, :root[data-theme="dark"] .chroma .bp { color: #768390; }
+:root[data-theme="dark"] .chroma .err { color: #ffdcd7; background-color: #67060c; }
+:root[data-theme="dark"] .chroma .gd { color: #ffdcd7; background-color: #67060c; }
+:root[data-theme="dark"] .chroma .gi { color: #aff5b4; background-color: #033a16; }
+@media (prefers-color-scheme: dark) {
+:root:not([data-theme="light"]) .bg, :root:not([data-theme="light"]) .chroma { background-color: var(--code-bg); color: var(--fg); }
+:root:not([data-theme="light"]) .chroma .hl { background-color: #2d333b; }
+:root:not([data-theme="light"]) .chroma .lnt, :root:not([data-theme="light"]) .chroma .ln { color: #768390; }
+:root:not([data-theme="light"]) .chroma .k, :root:not([data-theme="light"]) .chroma .kc, :root:not([data-theme="light"]) .chroma .kd, :root:not([data-theme="light"]) .chroma .kn, :root:not([data-theme="light"]) .chroma .kp, :root:not([data-theme="light"]) .chroma .kr, :root:not([data-theme="light"]) .chroma .kt, :root:not([data-theme="light"]) .chroma .nl { color: #f47067; }
+:root:not([data-theme="light"]) .chroma .s, :root:not([data-theme="light"]) .chroma .sa, :root:not([data-theme="light"]) .chroma .sb, :root:not([data-theme="light"]) .chroma .sc, :root:not([data-theme="light"]) .chroma .dl, :root:not([data-theme="light"]) .chroma .sd, :root:not([data-theme="light"]) .chroma .s2, :root:not([data-theme="light"]) .chroma .se, :root:not([data-theme="light"]) .chroma .sh, :root:not([data-theme="light"]) .chroma .si, :root:not([data-theme="light"]) .chroma .sx, :root:not([data-theme="light"]) .chroma .sr, :root:not([data-theme="light"]) .chroma .s1, :root:not([data-theme="light"]) .chroma .ss { color: #96d0ff; }
+:root:not([data-theme="light"]) .chroma .m, :root:not([data-theme="light"]) .chroma .mb, :root:not([data-theme="light"]) .chroma .mf, :root:not([data-theme="light"]) .chroma .mh, :root:not([data-theme="light"]) .chroma .mi, :root:not([data-theme="light"]) .chroma .il, :root:not([data-theme="light"]) .chroma .mo, :root:not([data-theme="light"]) .chroma .no, :root:not([data-theme="light"]) .chroma .nd, :root:not([data-theme="light"]) .chroma .nt { color: #6cb6ff; }
+:root:not([data-theme="light"]) .chroma .na, :root:not([data-theme="light"]) .chroma .nc, :root:not([data-theme="light"]) .chroma .nn, :root:not([data-theme="light"]) .chroma .nx, :root:not([data-theme="light"]) .chroma .ge, :root:not([data-theme="light"]) .chroma .go, :root:not([data-theme="light"]) .chroma .p, :root:not([data-theme="light"]) .chroma .o, :root:not([data-theme="light"]) .chroma .ow, :root:not([data-theme="light"]) .chroma .or, :root:not([data-theme="light"]) .chroma .w { color: #e6edf3; }
+:root:not([data-theme="light"]) .chroma .ni, :root:not([data-theme="light"]) .chroma .nb, :root:not([data-theme="light"]) .chroma .nf, :root:not([data-theme="light"]) .chroma .fm { color: #dcbdfb; }
+:root:not([data-theme="light"]) .chroma .nv, :root:not([data-theme="light"]) .chroma .vc, :root:not([data-theme="light"]) .chroma .vg, :root:not([data-theme="light"]) .chroma .vi, :root:not([data-theme="light"]) .chroma .vm { color: #f69d50; }
+:root:not([data-theme="light"]) .chroma .c, :root:not([data-theme="light"]) .chroma .ch, :root:not([data-theme="light"]) .chroma .cm, :root:not([data-theme="light"]) .chroma .c1, :root:not([data-theme="light"]) .chroma .cs, :root:not([data-theme="light"]) .chroma .cp, :root:not([data-theme="light"]) .chroma .cpf, :root:not([data-theme="light"]) .chroma .bp { color: #768390; }
+:root:not([data-theme="light"]) .chroma .err { color: #ffdcd7; background-color: #67060c; }
+:root:not([data-theme="light"]) .chroma .gd { color: #ffdcd7; background-color: #67060c; }
+:root:not([data-theme="light"]) .chroma .gi { color: #aff5b4; background-color: #033a16; }
+}
