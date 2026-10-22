@@ -1,9 +1,13 @@
 {{ define "main" }}
 <section class="card" id="overview">
   <h1>{{ .Site.Params.author }}</h1>
-  <p class="tagline">Compilers, LLM inference, and computer architecture —
-    building small systems and checking big claims against the code.</p>
+  <p class="tagline">Software Engineer on PyTorch at Meta — distributed
+    training, data parallelism, Float8 and low-precision dtypes.</p>
+  {{ with .Site.Params.bio.en }}<p>{{ . }}</p>{{ end }}
   <p>Elsewhere: <a href="{{ .Site.Params.github }}">GitHub</a> ·
+    <a href="{{ .Site.Params.linkedin }}">LinkedIn</a> ·
+    <a href="mailto:{{ .Site.Params.email }}">Email</a> ·
+    <a href="{{ .Site.Params.previous }}">Previous homepage</a> ·
     <a href="{{ "/about/" | relURL }}">About</a> ·
     <a href="{{ "/posts/" | relURL }}">Posts</a></p>
 </section>
@@ -28,10 +32,11 @@
   <h2>Publications</h2>
   <ul class="entries">
     {{ range . }}
+    {{ $pub := . }}
     <li>
       <strong>{{ .title.en }}</strong>
       {{ with .authors }}<p class="authors">{{ . }}</p>{{ end }}
-      {{ with .venue.en }}<p class="venue">{{ . }}{{ with $.date }} · {{ . }}{{ end }}</p>{{ end }}
+      {{ with .venue.en }}<p class="venue">{{ . }}{{ with $pub.date }} · {{ . }}{{ end }}</p>{{ else }}{{ with $pub.date }}<p class="venue">{{ . }}</p>{{ end }}{{ end }}
       {{ with .links }}
       <p>{{ with .paper }}<a href="{{ . }}">Paper</a>{{ end }}
          {{ with .code }} · <a href="{{ . }}">Code</a>{{ end }}</p>

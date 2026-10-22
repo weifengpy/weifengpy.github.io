@@ -1,9 +1,68 @@
-# Homepage experience timeline. No confirmed entries yet — the homepage
-# card is hidden while this list is empty. Schema per entry:
+# Homepage experience timeline, consolidated 2026-10-21 from the previous
+# Google Sites homepage (sites.google.com/site/weifengdm). Schema per entry:
 #
 # - org:   { en: "...", zh: "" }
 #   role:  { en: "...", zh: "" }
 #   time:  "2024 - present"
 #   description: { en: "...", zh: "" }
-#   link:  "https://..."
-[]
+#   link:  "https://..."        # optional
+- org:
+    en: "Meta"
+    zh: "Meta"
+  role:
+    en: "Software Engineer"
+    zh: "软件工程师"
+  time: "2023 - present"
+  description:
+    en: "PyTorch distributed — FSDP2, FlexShard, TorchTitan; data parallelism, Float8 and low-precision dtypes."
+    zh: "PyTorch 分布式：FSDP2、FlexShard、TorchTitan；数据并行、Float8 与低精度数据类型"
+- org:
+    en: "Meta"
+    zh: "Meta"
+  role:
+    en: "Software Engineer"
+    zh: "软件工程师"
+  time: "Sep 2019 - 2023"
+  description:
+    en: "Recommender systems for Reels — retrieval and responsiveness."
+    zh: "Reels 推荐系统：召回与响应速度"
+- org:
+    en: "Hulu"
+    zh: "Hulu"
+  role:
+    en: "Lead Researcher"
+    zh: "Lead Researcher"
+  time: "2015 - 2019"
+  description:
+    en: "Recommender systems and data science."
+    zh: "推荐系统与数据科学"
+- org:
+    en: "Tsinghua University"
+    zh: "清华大学"
+  role:
+    en: "PhD"
+    zh: "博士"
+  time: "2010 - 2015"
+  description:
+    en: "Recommender systems. Advisor: Jianyong Wang."
+    zh: "推荐系统，导师王建勇"
+- org:
+    en: "University of Illinois Urbana-Champaign"
+    zh: "UIUC"
+  role:
+    en: "Visiting Scholar"
+    zh: "访问学者"
+  time: "2013 - 2014"
+  description:
+    en: "Computer Science. Advisor: Jiawei Han."
+    zh: "计算机科学，导师韩家炜"
+- org:
+    en: "Beihang University"
+    zh: "北京航空航天大学"
+  role:
+    en: "Bachelor's"
+    zh: "本科"
+  time: "2006 - 2010"
+  description:
+    en: "Department of Software Engineering."
+    zh: "软件工程系"

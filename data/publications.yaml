@@ -1,12 +1,116 @@
-# Homepage publications. No confirmed entries yet — the homepage card is
-# hidden while this list is empty. Schema per entry:
+# Homepage publications, consolidated 2026-10-21 from the previous Google
+# Sites homepage (sites.google.com/site/weifengdm). Author strings are kept
+# as listed there; links are left out unless an exact URL is confirmed.
+# Schema per entry:
 #
 # - title:   { en: "...", zh: "" }
-#   authors: "A. One, B. Two, weifengpy"      # bold the site owner in template by exact handle/name match later
+#   authors: "A. One, B. Two"                  # optional
 #   venue:   { en: "Conf 2026", zh: "" }
-#   date:    "2026-01"
-#   links:
+#   date:    "2026"
+#   links:                                     # optional, only confirmed URLs
 #     paper: "https://..."
 #     code:  "https://..."
-#   image:   "/img/publications/example.png"  # optional teaser, must have alt text in template
-[]
+#   image:   "/img/publications/example.png"   # optional teaser
+- title:
+    en: "TorchTitan: One-stop PyTorch Native Solution for Production Ready LLM Pre-training"
+    zh: ""
+  venue:
+    en: "ICLR 2025"
+    zh: ""
+  date: "2025"
+- title:
+    en: "Dynamically Pruned Message Passing Networks for Large-Scale Knowledge Graph Reasoning"
+    zh: ""
+  authors: "X Xu, W Feng, Y Jiang, X Xie, Z Sun, ZH Deng"
+  venue:
+    en: "ICLR 2020"
+    zh: ""
+  date: "2020"
+- title:
+    en: "Neural Consciousness Flow"
+    zh: ""
+  authors: "X Xu, W Feng, Z Sun, ZH Deng"
+  venue:
+    en: ""
+    zh: ""
+  date: "2019"
+- title:
+    en: "Backprop-Q: Generalized Backpropagation for Stochastic Computation Graphs"
+    zh: ""
+  authors: "X Xu, S Zu, Y Zhang, H Zhou, W Feng"
+  venue:
+    en: "NeurIPS 2018 Deep Reinforcement Learning Workshop"
+    zh: ""
+  date: "2018"
+- title:
+    en: "Modeling Attention Flow on Graphs"
+    zh: ""
+  authors: "X Xu, S Zu, C Gao, Y Zhang, W Feng"
+  venue:
+    en: "NeurIPS 2018 Relational Representation Learning Workshop"
+    zh: ""
+  date: "2018"
+- title:
+    en: "StreamCube: Hierarchical Spatio-temporal Hashtag Clustering for Event Exploration over the Twitter Stream"
+    zh: ""
+  authors: "Wei Feng, Jiawei Han, Jianyong Wang, Charu Aggarwal, Jianbin Huang"
+  venue:
+    en: "ICDE 2015"
+    zh: ""
+  date: "2015"
+- title:
+    en: "We Can Learn Your #Hashtags: Connecting Tweets to Explicit Topics"
+    zh: ""
+  authors: "Wei Feng, Jianyong Wang, Wei Zhang"
+  venue:
+    en: "ICDE 2014"
+    zh: ""
+  date: "2014"
+- title:
+    en: "Combining Latent Factor Model with Location Features for Event-based Group Recommendation"
+    zh: ""
+  authors: "Wei Zhang, Jianyong Wang, Wei Feng"
+  venue:
+    en: "KDD 2013"
+    zh: ""
+  date: "2013"
+- title:
+    en: "Integrating Semantic Relatedness and Words' Intrinsic Features for Keyword Extraction"
+    zh: ""
+  authors: "Wei Zhang, Wei Feng, Jianyong Wang"
+  venue:
+    en: "IJCAI 2013"
+    zh: ""
+  date: "2013"
+- title:
+    en: "Learning to Annotate Tweets with Crowd Wisdom"
+    zh: ""
+  authors: "Wei Feng, Jianyong Wang"
+  venue:
+    en: "WWW 2013 (Poster)"
+    zh: ""
+  date: "2013"
+- title:
+    en: "Retweet or Not? Personalized Tweet Re-ranking"
+    zh: ""
+  authors: "Wei Feng, Jianyong Wang"
+  venue:
+    en: "WSDM 2013"
+    zh: ""
+  date: "2013"
+- title:
+    en: "Incorporating Heterogeneous Information for Personalized Tag Recommendation in Social Tagging Systems"
+    zh: ""
+  authors: "Wei Feng, Jianyong Wang"
+  venue:
+    en: "KDD 2012"
+    zh: ""
+  date: "2012"
+- title:
+    en: "HeterRank: Addressing Information Heterogeneity for Personalized Recommendation in Social Tagging Systems"
+    zh: ""
+  authors: "Wei Feng, Jianyong Wang"
+  venue:
+    en: "WWW 2012 (Poster)"
+    zh: ""
+  date: "2012"

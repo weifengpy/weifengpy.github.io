@@ -1,11 +1,18 @@
 # weifengpy.github.io
 
-Personal homepage + blog of **weifengpy**, built with [Hugo](https://gohugo.io/)
+Personal homepage + blog of **Wei Feng** (weifengpy on GitHub), built with [Hugo](https://gohugo.io/)
 (extended, pinned version below) and hosted on GitHub Pages.
 One repository, one site: the front page is the homepage (project index,
 publications, experience), `/posts/` is the blog.
 
 Live site: https://weifengpy.github.io/
+
+Content note: the Overview, experience, and publications content was
+consolidated on 2026-10-21 from the previous Google Sites homepage
+(sites.google.com/site/weifengdm). LinkedIn details — job title, the
+September 2019 start at Meta, and the Highlights wording — follow a
+screenshot the owner provided on 2026-10-21; the public LinkedIn page
+itself sits behind a login wall and was not read directly.
 
 ## Toolchain
 
@@ -63,14 +70,22 @@ links, image alt text, stable slugs).
 
 ## TODO (owner to fill in)
 
-- [ ] Real name / display name (v1 shows the GitHub handle `weifengpy` only)
-- [ ] One-line bio and current affiliation/employer, if desired
+- [x] Real name / display name — site now shows **Wei Feng**
+- [x] One-line bio and current affiliation/employer — Overview filled from
+      the previous homepage and the owner's LinkedIn screenshot
 - [ ] Avatar photo (goes to `static/`, referenced from the Overview card)
 - [ ] CV PDF (goes to `static/`, linked from About)
-- [ ] Decide whether to publish an email address on About (v1: GitHub only)
-- [ ] Fill `data/publications.yaml`, `data/experiences.yaml`, `data/awards.yaml`
-      with confirmed entries (schemas are documented at the top of each file)
-- [ ] Fill `zh` fields in `data/*.yaml` when the homepage gets a language toggle
+- [x] Email address — published on the site (fengwei824@gmail.com, as
+      listed on the previous homepage)
+- [x] Fill `data/publications.yaml` and `data/experiences.yaml` —
+      consolidated from the previous homepage on 2026-10-21
+- [ ] Fill `data/awards.yaml` with confirmed entries (still empty; the
+      card stays hidden until then)
+- [ ] Add the Google Scholar profile link — the previous homepage did
+      not expose an exact profile URL, so none was invented
+- [ ] Fill the remaining `zh` fields in `data/*.yaml` (bio and
+      experiences are filled; projects/publications pending) and add a
+      language toggle to the homepage
 - [ ] Submit the sitemap in Google Search Console and Bing Webmaster Tools,
       and add the Search Console verification meta tag to `partials/head.html`
 - [ ] Later, optionally: custom domain (add `CNAME`, change `baseURL` in
