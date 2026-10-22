@@ -2,14 +2,14 @@
 title: "Welcome"
 date: 2026-10-21
 slug: "welcome"
-description: "A first post: what this site is for — notes on compilers, LLM inference, and computer architecture, plus a project index."
+description: "A first post: what this site is for — notes on compilers, LLM inference, and computer architecture."
 tags: ["meta"]
 draft: false
 ---
 
-This site is a combined homepage and blog. The front page is an index of
-[my projects](/#projects), and this posts section is where I will write up
-notes as I go.
+This site is a combined homepage and blog: the front page is the post
+list, and this is where I will write up notes as I go. More about me and
+my projects lives on the [About page](/about/).
 
 Expect three recurring themes:
 
@@ -25,6 +25,5 @@ Expect three recurring themes:
 int main(void) { return 0; }  /* everything starts somewhere */
 ```
 
-More about the projects themselves lives on the [About page](/about/).
 Posts will be short or long as the material demands; the only promise is
 that numbers here come with their sources attached.

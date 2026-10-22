@@ -54,7 +54,7 @@
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{/* Structured data */}}
 {{- if .IsHome -}}
-{{- $person := dict "@type" "Person" "name" .Site.Params.author "url" .Site.BaseURL "jobTitle" "Software Engineer" "worksFor" (dict "@type" "Organization" "name" "Meta") "sameAs" (slice .Site.Params.github .Site.Params.linkedin) -}}
+{{- $person := dict "@type" "Person" "name" .Site.Params.author "url" .Site.BaseURL "jobTitle" "Software Engineer" "worksFor" (dict "@type" "Organization" "name" "Meta") "sameAs" (slice .Site.Params.linkedin) -}}
 {{- $website := dict "@type" "WebSite" "name" .Site.Title "url" .Site.BaseURL -}}
 {{- $ld := dict "@context" "https://schema.org" "@graph" (slice $person $website) -}}
 <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>

@@ -48,9 +48,9 @@ supplies the fields. Required:
   the attributes explicitly).
 - Keep per-post image weight low; compress before committing.
 
-## Homepage data
+## About-page data
 
-- Homepage cards render from `data/projects.yaml`, `publications.yaml`,
+- About-page cards render from `data/projects.yaml`, `publications.yaml`,
   `experiences.yaml`, `awards.yaml`. Update the YAML, not the template.
 - Text fields are `{en, zh}` maps. v1 renders `en` only and renders it as
   complete HTML (crawler constraint); `zh` may be filled ahead of a

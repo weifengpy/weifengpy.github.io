@@ -2,12 +2,13 @@
 
 Personal homepage + blog of **Wei Feng** (weifengpy on GitHub), built with [Hugo](https://gohugo.io/)
 (extended, pinned version below) and hosted on GitHub Pages.
-One repository, one site: the front page is the homepage (project index,
-publications, experience), `/posts/` is the blog.
+One repository, one site: the front page is the post list (the blog is
+the landing page); the profile — bio, projects, experience,
+publications — lives on `/about/`.
 
 Live site: https://weifengpy.github.io/
 
-Content note: the Overview, experience, and publications content was
+Content note: the bio, experience, and publications content was
 consolidated on 2026-10-21 from the previous Google Sites homepage
 (sites.google.com/site/weifengdm). LinkedIn details — job title, the
 September 2019 start at Meta, and the Highlights wording — follow a
@@ -51,7 +52,7 @@ builds the site, runs the SEO gate, and deploys to GitHub Pages
 | `hugo.toml` | Site config. Permalinks for posts are **final**: `/posts/:year/:slug/` |
 | `content/posts/` | Blog posts (Markdown, one folder per year) |
 | `content/about.md` | About page |
-| `data/` | Homepage cards as data: `projects.yaml`, `publications.yaml`, `experiences.yaml`, `awards.yaml`. Edit these to update the homepage; empty lists hide their card. Text fields use `{en, zh}` keys; v1 renders `en` only |
+| `data/` | About-page cards as data: `projects.yaml`, `publications.yaml`, `experiences.yaml`, `awards.yaml`. Edit these to update the About page; empty lists hide their card. Text fields use `{en, zh}` keys; v1 renders `en` only |
 | `layouts/` | Hand-written minimal theme (no external theme). `partials/head.html` owns all SEO metadata |
 | `assets/css/main.css` | The single stylesheet (Hugo pipeline: minify + fingerprint) |
 | `static/` | Files copied verbatim (favicon, future CV/avatar) |
@@ -71,9 +72,9 @@ links, image alt text, stable slugs).
 ## TODO (owner to fill in)
 
 - [x] Real name / display name — site now shows **Wei Feng**
-- [x] One-line bio and current affiliation/employer — Overview filled from
+- [x] One-line bio and current affiliation/employer — bio filled from
       the previous homepage and the owner's LinkedIn screenshot
-- [ ] Avatar photo (goes to `static/`, referenced from the Overview card)
+- [ ] Avatar photo (goes to `static/`, referenced from the About page)
 - [ ] CV PDF (goes to `static/`, linked from About)
 - [x] Email address — published on the site (fengwei824@gmail.com, as
       listed on the previous homepage)
@@ -85,7 +86,7 @@ links, image alt text, stable slugs).
       not expose an exact profile URL, so none was invented
 - [ ] Fill the remaining `zh` fields in `data/*.yaml` (bio and
       experiences are filled; projects/publications pending) and add a
-      language toggle to the homepage
+      language toggle to the site
 - [ ] Submit the sitemap in Google Search Console and Bing Webmaster Tools,
       and add the Search Console verification meta tag to `partials/head.html`
 - [ ] Later, optionally: custom domain (add `CNAME`, change `baseURL` in

@@ -8,9 +8,9 @@ enableRobotsTXT = true
 rssLimit = -1
 
 [params]
-  description = "Wei Feng — Software Engineer at Meta working on PyTorch distributed training. Notes and projects on compilers, LLM inference, and computer architecture."
+  description = "Posts by Wei Feng, a Software Engineer at Meta working on PyTorch distributed training — notes on compilers, LLM inference, and computer architecture."
   author = "Wei Feng"
-  github = "https://github.com/weifengpy"
+  tagline = "Notes on compilers, LLM inference, and computer architecture."
   linkedin = "https://www.linkedin.com/in/wei-feng-6740003b"
   email = "fengwei824@gmail.com"
   previous = "https://sites.google.com/site/weifengdm/"

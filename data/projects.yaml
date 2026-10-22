@@ -1,4 +1,4 @@
-# Homepage projects. Schema per entry:
+# About-page projects. Schema per entry:
 #   name:        { en: "...", zh: "" }        # zh may be left empty in v1
 #   description: { en: "...", zh: "" }
 #   link:        "https://..."               # empty string = no link yet
@@ -9,7 +9,7 @@
   description:
     en: "A from-scratch C compiler (x86-64) with its own libc, an RV32IM backend, and a self-hosting toolchain."
     zh: ""
-  link: "https://github.com/weifengpy/tiny-cc"
+  link: ""
 - name:
     en: "tiny-infer"
     zh: ""
