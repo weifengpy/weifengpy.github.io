@@ -1,0 +1,40 @@
+# Homepage projects. Schema per entry:
+#   name:        { en: "...", zh: "" }        # zh may be left empty in v1
+#   description: { en: "...", zh: "" }
+#   link:        "https://..."               # empty string = no link yet
+#   time:        "YYYY" or "YYYY - present"  # optional
+- name:
+    en: "tiny-cc"
+    zh: "tiny-cc"
+  description:
+    en: "A from-scratch C compiler (x86-64) with its own libc, an RV32IM backend, and a self-hosting toolchain."
+    zh: ""
+  link: "https://github.com/weifengpy/tiny-cc"
+- name:
+    en: "tiny-infer"
+    zh: ""
+  description:
+    en: "A minimal, readability-first LLM inference engine with hand-written CUDA kernels."
+    zh: ""
+  link: ""
+- name:
+    en: "tiny-serve"
+    zh: ""
+  description:
+    en: "An OpenAI-compatible HTTP serving layer built on tiny-infer."
+    zh: ""
+  link: ""
+- name:
+    en: "TPU v1 RTL replication"
+    zh: ""
+  description:
+    en: "A faithful RTL recreation of Google's TPU v1, simulation-first with Verilator."
+    zh: ""
+  link: ""
+- name:
+    en: "Torch2RISCV"
+    zh: ""
+  description:
+    en: "A workbench for compiling PyTorch models down to RISC-V on a PYNQ-Z1 board."
+    zh: ""
+  link: ""

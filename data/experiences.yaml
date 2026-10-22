@@ -1,0 +1,9 @@
+# Homepage experience timeline. No confirmed entries yet — the homepage
+# card is hidden while this list is empty. Schema per entry:
+#
+# - org:   { en: "...", zh: "" }
+#   role:  { en: "...", zh: "" }
+#   time:  "2024 - present"
+#   description: { en: "...", zh: "" }
+#   link:  "https://..."
+[]

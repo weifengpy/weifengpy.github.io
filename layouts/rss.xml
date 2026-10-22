@@ -1,0 +1,20 @@
+{{- $pages := where .Site.RegularPages "Section" "posts" -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Site.Title }}</title>
+    <link>{{ .Site.BaseURL }}</link>
+    <description>{{ .Site.Params.description }}</description>
+    <language>{{ .Site.Language.LanguageCode }}</language>
+    <atom:link href="{{ "index.xml" | absURL }}" rel="self" type="application/rss+xml" />
+    {{ range $pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      <description>{{ .Content | html }}</description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>

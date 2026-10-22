@@ -1,0 +1,12 @@
+# Homepage publications. No confirmed entries yet — the homepage card is
+# hidden while this list is empty. Schema per entry:
+#
+# - title:   { en: "...", zh: "" }
+#   authors: "A. One, B. Two, weifengpy"      # bold the site owner in template by exact handle/name match later
+#   venue:   { en: "Conf 2026", zh: "" }
+#   date:    "2026-01"
+#   links:
+#     paper: "https://..."
+#     code:  "https://..."
+#   image:   "/img/publications/example.png"  # optional teaser, must have alt text in template
+[]

@@ -1,0 +1,43 @@
+baseURL = "https://weifengpy.github.io/"
+title = "weifengpy"
+locale = "en-US"
+enableGitInfo = true
+enableRobotsTXT = true
+
+# Full-content RSS: no item limit.
+rssLimit = -1
+
+[params]
+  description = "Notes and projects on compilers, LLM inference, and computer architecture."
+  author = "weifengpy"
+  github = "https://github.com/weifengpy"
+
+[permalinks]
+  [permalinks.page]
+    posts = "/posts/:year/:slug/"
+  [permalinks.section]
+    posts = "/posts/"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    noClasses = false
+    lineNos = false
+    style = "github"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+[sitemap]
+  changeFreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
