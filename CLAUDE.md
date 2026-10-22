@@ -24,7 +24,7 @@ supplies the fields. Required:
 | `date` | Publication date, `YYYY-MM-DD` |
 | `slug` | Matches the file name |
 | `description` | **Required.** One or two sentences, hand-written; it becomes the search-result snippet and the social-share text. Must be unique across the site — CI fails otherwise |
-| `tags` | Reuse existing tags; add a new tag only when a topic will recur. Thin single-use tag pages dilute indexing |
+| `tags` | **Do not use.** Tagging is disabled site-wide (`disableKinds` in `hugo.toml`, so no `/tags/` pages exist); omit the field entirely |
 | `draft` | `true` while writing, `false` to publish |
 
 ## Content

@@ -4,6 +4,9 @@ locale = "en-US"
 enableGitInfo = true
 enableRobotsTXT = true
 
+# Tags are disabled site-wide: no /tags/ index or term pages are generated.
+disableKinds = ["taxonomy", "term"]
+
 # Full-content RSS: no item limit.
 rssLimit = -1
 

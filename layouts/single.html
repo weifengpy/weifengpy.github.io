@@ -5,9 +5,7 @@
     {{ if eq .Section "posts" }}
     <p class="post-meta">
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-      {{ with .Params.tags }} ·
-        {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ (printf "/tags/%s/" (urlize $t)) | relURL }}">{{ $t }}</a>{{ end }}
-      {{ end }}
+      {{ with .Params.tags }} · {{ delimit . ", " }}{{ end }}
     </p>
     {{ end }}
   </header>
