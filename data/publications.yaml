@@ -25,6 +25,17 @@
     pdf: "https://arxiv.org/pdf/2410.06511"
 
 - title:
+    en: "TORCHSIM: High Fidelity Runtime and Memory Estimation for Distributed Training"
+    zh: ""
+  authors: "Sanket Purandare, Emma Yang, Andrew Zhao, Qitong Wang, Wei Feng, Alban Desmaison, Andrew Gu, Tianyu Liu, Less Wright, Gokul Nadathur, Stratos Idreos"
+  venue:
+    en: "ES-FoMo III: 3rd Workshop on Efficient Systems for Foundation Models 2025"
+    zh: ""
+  date: "2025"
+  links:
+    pdf: "https://openreview.net/pdf/27ed579df02afa6f221ada9dc9bbbb55848440e6.pdf"
+
+- title:
     en: "Dynamically Pruned Message Passing Networks for Large-Scale Knowledge Graph Reasoning"
     zh: ""
   authors: "X Xu, W Feng, Y Jiang, X Xie, Z Sun, ZH Deng"
