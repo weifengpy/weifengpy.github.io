@@ -17,6 +17,7 @@
 - title:
     en: "TorchTitan: One-stop PyTorch Native Solution for Production Ready LLM Pre-training"
     zh: ""
+  authors: "Wanchao Liang, Tianyu Liu, Less Wright, Will Constable, Andrew Gu, Chien-Chin Huang, Iris Zhang, Wei Feng, Howard Huang, Junjie Wang, Sanket Purandare, Gokul Nadathur, Stratos Idreos"
   venue:
     en: "ICLR 2025"
     zh: ""
