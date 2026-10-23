@@ -112,7 +112,7 @@ links, image alt text, stable slugs).
       consolidated from the previous homepage on 2026-10-21
 - [ ] Fill `data/awards.yaml` with confirmed entries (still empty; the
       card stays hidden until then)
-- [ ] Add the Google Scholar profile link — the previous homepage did
+- [x] Add the Google Scholar profile link — the previous homepage did
       not expose an exact profile URL, so none was invented
 - [ ] Fill the remaining `zh` fields in `data/*.yaml` (bio zh filled; publications pending) and add a
       language toggle to the site

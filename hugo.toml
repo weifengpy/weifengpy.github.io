@@ -16,6 +16,7 @@ rssLimit = -1
   tagline = "Notes on compilers, LLM inference, and computer architecture."
   linkedin = "https://www.linkedin.com/in/wei-feng-6740003b"
   email = "fengwei824@gmail.com"
+  scholar = "https://scholar.google.com/citations?user=cYrpt1kAAAAJ&hl=en"
 
   [params.bio]
     en = """
