@@ -52,7 +52,7 @@ builds the site, runs the SEO gate, and deploys to GitHub Pages
 | `hugo.toml` | Site config. Permalinks for posts are **final**: `/posts/:year/:slug/` |
 | `content/posts/` | Blog posts (Markdown, one folder per year) |
 | `content/about.md` | About page |
-| `data/` | About-page cards as data: `publications.yaml`, `experiences.yaml`, `awards.yaml`. Edit these to update the About page; empty lists hide their card. Text fields use `{en, zh}` keys; v1 renders `en` only |
+| `data/` | About-page cards as data: `publications.yaml`, `awards.yaml`. Edit these to update the About page; empty lists hide their card. Text fields use `{en, zh}` keys; v1 renders `en` only |
 | `layouts/` | Hand-written minimal theme (no external theme). `partials/head.html` owns all SEO metadata |
 | `assets/css/main.css` | The single stylesheet (Hugo pipeline: minify + fingerprint) |
 | `static/` | Files copied verbatim (favicon, future CV/avatar) |
@@ -108,14 +108,13 @@ links, image alt text, stable slugs).
 - [ ] CV PDF (goes to `static/`, linked from About)
 - [x] Email address — published on the site (fengwei824@gmail.com, as
       listed on the previous homepage)
-- [x] Fill `data/publications.yaml` and `data/experiences.yaml` —
+- [x] Fill `data/publications.yaml` —
       consolidated from the previous homepage on 2026-10-21
 - [ ] Fill `data/awards.yaml` with confirmed entries (still empty; the
       card stays hidden until then)
 - [ ] Add the Google Scholar profile link — the previous homepage did
       not expose an exact profile URL, so none was invented
-- [ ] Fill the remaining `zh` fields in `data/*.yaml` (bio and
-      experiences are filled; publications pending) and add a
+- [ ] Fill the remaining `zh` fields in `data/*.yaml` (bio zh filled; publications pending) and add a
       language toggle to the site
 - [ ] Submit the sitemap in Google Search Console and Bing Webmaster Tools,
       and add the Search Console verification meta tag to `partials/head.html`

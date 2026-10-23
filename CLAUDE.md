@@ -32,7 +32,7 @@ supplies the fields. Required:
 - Exactly one `#` (h1) per page — the template renders the title as the
   h1, so start body headings at `##` and do not skip levels.
 - Every post links to **at least two** other pages on this site
-  (related older post, About, an Experience or Publications anchor). When a new post
+  (related older post, About, a Publications anchor). When a new post
   supersedes an old one, add a backlink in the old post too.
 - Numbers and claims carry their sources (links), as in the rest of the
   owner's work.
@@ -50,8 +50,8 @@ supplies the fields. Required:
 
 ## About-page data
 
-- About-page cards render from `data/publications.yaml,
-  `experiences.yaml`, `awards.yaml`. Update the YAML, not the template.
+- About-page cards render from `data/publications.yaml`,
+  `awards.yaml`. Update the YAML, not the template.
 - Text fields are `{en, zh}` maps. v1 renders `en` only and renders it as
   complete HTML (crawler constraint); `zh` may be filled ahead of a
   future language toggle, which must never hide content behind JS.

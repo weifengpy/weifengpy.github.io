@@ -6,21 +6,6 @@
   {{ .Content }}
 </article>
 
-{{ with hugo.Data.experiences }}
-<section class="card" id="experience">
-  <h2>Experience</h2>
-  <ul class="entries">
-    {{ range . }}
-    <li>
-      <strong>{{ .role.en }}</strong>{{ with .org.en }} — {{ . }}{{ end }}
-      {{ with .time }}<span class="when">{{ . }}</span>{{ end }}
-      {{ with .description.en }}<p>{{ . }}</p>{{ end }}
-    </li>
-    {{ end }}
-  </ul>
-</section>
-{{ end }}
-
 {{ with hugo.Data.publications }}
 <section class="card" id="publications">
   <h2>Publications</h2>
@@ -54,10 +39,4 @@
 </section>
 {{ end }}
 
-<section class="card" id="elsewhere">
-  <h2>Elsewhere</h2>
-  <p><a href="{{ .Site.Params.linkedin }}">LinkedIn</a> ·
-    <a href="mailto:{{ .Site.Params.email }}">Email</a> ·
-    <a href="{{ .Site.Params.previous }}">Previous homepage</a></p>
-</section>
 {{ end }}

@@ -16,10 +16,17 @@ rssLimit = -1
   tagline = "Notes on compilers, LLM inference, and computer architecture."
   linkedin = "https://www.linkedin.com/in/wei-feng-6740003b"
   email = "fengwei824@gmail.com"
-  previous = "https://sites.google.com/site/weifengdm/"
 
   [params.bio]
-    en = "Wei Feng is a Software Engineer at Meta working on PyTorch distributed training — FSDP2, FlexShard, TorchTitan; data parallelism, Float8, and low-precision dtypes. Before that he worked on recommender systems at Meta (Reels — retrieval and responsiveness) and as a Lead Researcher at Hulu. He received his PhD from Tsinghua University (recommender systems, advised by Jianyong Wang), was a visiting scholar at UIUC (with Jiawei Han), and got his bachelor's in software engineering from Beihang University."
+    en = """
+Wei Feng is a Software Engineer at Meta working on PyTorch distributed training
+
+* [FSDP2](https://docs.pytorch.org/tutorials/intermediate/FSDP_tutorial.html)
+* [FlexShard](https://github.com/meta-pytorch/flex_shard)
+* [TorchTitan](https://github.com/pytorch/torchtitan)
+
+Before that he worked on recommender systems at Meta (Reels — retrieval and responsiveness) and as a Lead Researcher at Hulu. He received his PhD from Tsinghua University (recommender systems, advised by [Jianyong Wang](https://dbgroup.cs.tsinghua.edu.cn/wangjy/)), was a visiting scholar at UIUC (with [Jiawei Han](https://hanj.cs.illinois.edu/)), and got his bachelor’s in software engineering from Beihang University.
+"""
     zh = "冯伟，Meta 软件工程师，从事 PyTorch 分布式训练（FSDP2、FlexShard、TorchTitan；数据并行、Float8 与低精度数据类型）。此前在 Meta 做推荐系统（Reels：召回与响应速度），更早在 Hulu 任 Lead Researcher。博士毕业于清华大学（推荐系统，导师王建勇），期间在 UIUC 做访问学者（韩家炜组），本科毕业于北京航空航天大学软件工程。"
 
 [permalinks]
