@@ -18,11 +18,12 @@ from pathlib import Path
 BASE = "https://weifengpy.github.io"
 
 # Redirect pages: built path -> the canonical target the page must point at.
-# /posts/ exists only to redirect to the front page (GitHub Pages has no
-# server-side 301), so it is exempt from exactly two rules: self-referential
-# canonical and sitemap coverage (and it must NOT appear in the sitemap).
+# /about/ exists only to redirect to the front page, which now carries the
+# About content (GitHub Pages has no server-side 301), so it is exempt from
+# exactly two rules: self-referential canonical and sitemap coverage (and it
+# must NOT appear in the sitemap).
 # Every other check below still applies to it in full.
-REDIRECTS = {"posts/index.html": f"{BASE}/"}
+REDIRECTS = {"about/index.html": f"{BASE}/"}
 pub = Path(sys.argv[1] if len(sys.argv) > 1 else "public")
 errors = []
 warnings = []

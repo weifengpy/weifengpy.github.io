@@ -6,9 +6,9 @@ description: "A first post: what this site is for — notes on compilers, LLM in
 draft: false
 ---
 
-This site is a combined homepage and blog: the front page is the post
-list, and this is where I will write up notes as I go. More about me — my experience and publications — lives on the
-[About page](/about/).
+This site is a combined homepage and blog: the front page is my
+profile, and this is where I will write up notes as I go. More about me — my experience and publications — lives on the
+[front page](/).
 
 Expect three recurring themes:
 

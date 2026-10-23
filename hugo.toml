@@ -14,6 +14,7 @@ rssLimit = -1
   description = "Posts by Wei Feng, a Software Engineer at Meta working on PyTorch distributed training — notes on compilers, LLM inference, and computer architecture."
   author = "Wei Feng"
   tagline = "Notes on compilers, LLM inference, and computer architecture."
+  github = "https://github.com/weifengpy"
   linkedin = "https://www.linkedin.com/in/wei-feng-6740003b"
   email = "fengwei824@gmail.com"
   scholar = "https://scholar.google.com/citations?user=cYrpt1kAAAAJ&hl=en"

@@ -2,9 +2,9 @@
 
 Personal homepage + blog of **Wei Feng** (weifengpy on GitHub), built with [Hugo](https://gohugo.io/)
 (extended, pinned version below) and hosted on GitHub Pages.
-One repository, one site: the front page is the post list (the blog is
-the landing page; `/posts/` redirects there); the profile — bio,
-experience, publications — lives on `/about/`.
+One repository, one site: the front page is the profile — bio and
+publications (the former About page; `/about/` redirects there); the
+blog post list lives on `/posts/`.
 
 Live site: https://weifengpy.github.io/
 
@@ -51,8 +51,9 @@ builds the site, runs the SEO gate, and deploys to GitHub Pages
 |---|---|
 | `hugo.toml` | Site config. Permalinks for posts are **final**: `/posts/:year/:slug/` |
 | `content/posts/` | Blog posts (Markdown, one folder per year) |
-| `content/about.md` | About page |
-| `data/` | About-page cards as data: `publications.yaml`, `awards.yaml`. Edit these to update the About page; empty lists hide their card. Text fields use `{en, zh}` keys; v1 renders `en` only |
+| `content/_index.md` | Front page: the profile (bio text; the cards below it come from `data/`) |
+| `content/about.md` | Redirect stub: `/about/` forwards to the front page |
+| `data/` | Front-page cards as data: `publications.yaml`, `awards.yaml`. Edit these to update the front page; empty lists hide their card. Text fields use `{en, zh}` keys; v1 renders `en` only |
 | `layouts/` | Hand-written minimal theme (no external theme). `partials/head.html` owns all SEO metadata |
 | `assets/css/main.css` | The single stylesheet (Hugo pipeline: minify + fingerprint) |
 | `static/` | Files copied verbatim (favicon, future CV/avatar) |
@@ -63,7 +64,7 @@ builds the site, runs the SEO gate, and deploys to GitHub Pages
 ## Color themes
 
 The site ships a light and a dark theme. The default choice is
-automatic, and a toggle button in the header (right of "About")
+automatic, and a toggle button in the header
 overrides it. The rule:
 
 - **A manual choice wins.** The toggle's label names the theme it will
@@ -104,8 +105,8 @@ links, image alt text, stable slugs).
 - [x] Real name / display name — site now shows **Wei Feng**
 - [x] One-line bio and current affiliation/employer — bio filled from
       the previous homepage and the owner's LinkedIn screenshot
-- [ ] Avatar photo (goes to `static/`, referenced from the About page)
-- [ ] CV PDF (goes to `static/`, linked from About)
+- [ ] Avatar photo (goes to `static/`, referenced from the front page)
+- [ ] CV PDF (goes to `static/`, linked from the front page)
 - [x] Email address — published on the site (fengwei824@gmail.com, as
       listed on the previous homepage)
 - [x] Fill `data/publications.yaml` —
