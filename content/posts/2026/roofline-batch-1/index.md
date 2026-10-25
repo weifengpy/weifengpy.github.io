@@ -132,8 +132,8 @@ engine is a hard gate, not a preference.
 
 ### Term 2: attention is a latency chain, not a byte stream (+0.30 ms)
 
-Attention's byte count is trivial — about 3.3 MB of KV per layer at
-context 370, worth roughly 2 µs of streaming per layer. It nevertheless
+Attention's byte count is trivial — well under 1 MB of KV per layer
+at context 370, worth under 0.5 µs of streaming per layer. It nevertheless
 costs about 13 µs per layer (318 µs per step). The time is a serial
 dependency chain: with the KV range split into a fixed set of
 8 partitions, each partition walks its ≈46 positions in order, and each
