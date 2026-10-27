@@ -8,7 +8,7 @@ draft: false
 
 I work with Muse as a continuing collaborator. The arrangement is deliberately physical. The brain and memory are in the cloud. The hands are on a workstation in my home. That machine runs my personal software projects, reaches the development hardware on and around my desk, and collects most of the information I ask the agent to watch. I also keep a separate, direct path into the same machine from my phone.
 
-{{< diagram src="fig-setup.svg" alt="Diagram of the setup: I contact Muse in the cloud from a phone or the web; Muse connects over SSH on Tailscale to my home PC; the PC runs tiny-infer, tiny-serve, and tiny-cc, connects to an ESP32-C6, Jetson Orin Nano, Raspberry Pi Pico, and Radxa Dragon Q6A, and pulls information from Gmail, X, Zhihu, GitHub, and YouTube; a dashed Termix line runs directly from me to the home PC." caption="The setup at a glance: one cloud agent, one home workstation, and two ways for me to reach that workstation — through the agent or directly." >}}
+{{< diagram src="fig-setup.svg" alt="Diagram of the setup: I contact Muse in the cloud from a phone or the web; Muse connects over SSH on Tailscale to my home PC; the PC runs tiny-infer, tiny-serve, and tiny-cc, connects to an ESP32-C6, Jetson Orin Nano, Raspberry Pi Pico, and Radxa Dragon Q6A, and pulls information from Gmail, X, Zhihu, GitHub, and YouTube; a dashed Termix line runs directly from me to the home PC." >}}
 
 ## 1. The brain and memory are in the cloud
 
@@ -38,8 +38,6 @@ Most of the hands-on software work concerns three personal projects:
 - **tiny-serve** — the serving layer above that engine. It turns a finished port into a service I can call from tools and agents, so the result becomes part of the daily setup, not a directory of test output.
 - **tiny-cc** — my from-scratch C compiler. The agent develops in dedicated worktrees on the workstation, runs the repository's tests and self-hosting checks, inspects failures, and prepares changes for the main line.
 
-One rule covers all three: passing the relevant gates comes before anything is merged. A promising result that fails a gate remains an experiment, not a success story — and numbers are only accepted from the current code, on the current machine, under a stated measurement protocol.
-
 ## 4. The PC reaches physical hardware
 
 The workstation is also the hub for development hardware attached to it or reachable through it. Through that one point, the agent can build firmware, flash a device, capture a serial log, and rerun a corpus:
@@ -61,8 +59,6 @@ The split is intentional: login state and fetching stay on the PC, over my home 
 - **GitHub** — notifications and activity, through the `gh` command-line tool.
 - **YouTube** — captions, not video files; the PC retrieves them for the agent to summarize, search, and discuss.
 
-YouTube shows why the route matters: credentials and cookies stay on my machine; only the resulting information crosses the boundary. The PC is more than a build server — it is where my code, devices, accounts, and reading streams meet the agent, and its access has to be deliberate rather than ambient.
-
 ## 6. I keep a direct line of my own
 
 I do not reach the workstation only through Muse. On my phone, I use Termix to connect directly to the same PC — the same shell, files, and processes the agent sees. That line changes the trust model:
@@ -73,6 +69,6 @@ I do not reach the workstation only through Muse. On my phone, I use Termix to c
 
 This is not a lack of trust in automation. It is what makes a high degree of automation reasonable: the system is observable and reversible, and my direct path does not depend on the agent reporting on itself.
 
-## The principles underneath
+## A follow-up
 
-The setup reduces to three principles: separate the brain from the hands — memory and conversation where they are always reachable, execution where the machines and accounts actually are; keep one workbench, where projects, hardware, and information meet in one controlled place; and keep the owner present, with inspection and takeover always one direct connection away. What this does not describe is how I work with the agent on that stage — task phrasing, decision division, and result checks. Those working patterns belong in a follow-up.
+What this does not describe is how I work with the agent on that stage — task phrasing, decision division, and result checks. Those working patterns belong in a follow-up.
