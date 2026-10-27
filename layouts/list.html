@@ -6,10 +6,18 @@
   <h2>{{ .Key }}</h2>
   <ul class="post-list">
     {{ range .Pages }}
-    <li>
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ $page := . }}
+    <li{{ with $page.Params.image }} class="has-thumb"{{ end }}>
+      {{- with $page.Params.image }}
+      {{- $res := $page.Resources.GetMatch . }}
+      {{- if not $res }}{{ errorf "post list: image %q not found in bundle of page %q" . $page.Path }}{{ end }}
+      <a class="post-thumb" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true">{{ $res.Content | safeHTML }}</a>
+      {{- end }}
+      <div class="post-item-body">
+        <time datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "2006-01-02" }}</time>
+        <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+        {{ with $page.Description }}<p>{{ . }}</p>{{ end }}
+      </div>
     </li>
     {{ end }}
   </ul>

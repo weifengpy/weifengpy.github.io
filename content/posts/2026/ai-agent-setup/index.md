@@ -3,6 +3,7 @@ title: "Addicted to Muse: Brain in the Cloud, Hands on My Home PC"
 date: 2026-10-26
 slug: "ai-agent-setup"
 description: "How my work with Muse is physically arranged: memory and reasoning in the cloud, execution on my home workstation, hardware and information flowing through one PC, and a direct line back in for me."
+image: "fig-setup.svg"
 draft: false
 ---
 
