@@ -62,14 +62,17 @@ main { padding-top: 1.5rem; }
    diagram shortcode) so it follows the theme CSS variables. */
 .post-list li.has-thumb { display: flex; gap: 1rem; align-items: flex-start; }
 .post-thumb {
-  flex: 0 0 220px; display: block; padding: 0.4rem;
+  flex: 0 0 280px; display: block; padding: 0.4rem;
   border: 1px solid var(--line); border-radius: 8px;
 }
 .post-thumb svg { display: block; width: 100%; height: auto; }
 .post-item-body { min-width: 0; }
 @media (max-width: 560px) {
-  .post-list li.has-thumb { gap: 0.75rem; }
-  .post-thumb { flex-basis: 120px; }
+  /* Stacked on narrow screens: the thumbnail takes the full content width
+     on top of the entry so the diagram text stays legible, with the date,
+     title, and summary below it. */
+  .post-list li.has-thumb { flex-direction: column; gap: 0.75rem; }
+  .post-thumb { flex: none; width: 100%; }
 }
 .post-meta { color: var(--muted); font-size: 0.95rem; }
 article img { max-width: 100%; height: auto; }
