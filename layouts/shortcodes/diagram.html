@@ -1,0 +1,10 @@
+{{- $src := .Get "src" -}}
+{{- $caption := .Get "caption" -}}
+{{- $resource := .Page.Resources.GetMatch $src -}}
+{{- if not $resource -}}
+  {{- errorf "diagram shortcode: resource %q not found on page %q" $src .Page.Path -}}
+{{- end -}}
+<figure class="diagram">
+  {{- $resource.Content | safeHTML -}}
+  {{- with $caption }}<figcaption>{{ . }}</figcaption>{{ end -}}
+</figure>
