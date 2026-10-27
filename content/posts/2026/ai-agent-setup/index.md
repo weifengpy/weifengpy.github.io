@@ -24,7 +24,7 @@ The cloud position is also convenient. I can start a task from my phone, check a
 
 ## 2. The hands are on my home PC
 
-The execution side is a home Ubuntu workstation with an Intel Core i9-13900KF and an NVIDIA GeForce RTX 5090. Muse reaches it over SSH on Tailscale. From the agent's point of view, this is the workbench: source trees live there, builds and tests run there, models are loaded on the GPU there, and long jobs are supervised there.
+The execution side is a home Ubuntu workstation with an Intel x86 CPU and an NVIDIA RTX 50-series GPU. Muse reaches it over SSH on Tailscale. From the agent's point of view, this is the workbench: source trees live there, builds and tests run there, models are loaded on the GPU there, and long jobs are supervised there.
 
 Getting that connection boring took some work. An earlier route for SSH across the public network path was unreliable: bursts of connections could be throttled, so work had to be batched carefully, queued across conversations, and resumed after a backoff period. That discipline was useful, but it was also friction in exactly the wrong place. I wanted the agent to spend its attention on the task, not on negotiating access to the machine. Moving the connection to Tailscale made the route private and stable enough that SSH stopped being a project of its own.
 

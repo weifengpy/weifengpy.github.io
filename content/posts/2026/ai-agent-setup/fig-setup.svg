@@ -46,7 +46,7 @@
   <!-- Middle layer: one home workstation -->
   <rect class="sd-node-main" x="300" y="225" width="320" height="96" rx="14"/>
   <text class="sd-title" x="460" y="261" text-anchor="middle">Home PC</text>
-  <text class="sd-subtitle" x="460" y="288" text-anchor="middle">Ubuntu · i9-13900KF · RTX 5090</text>
+  <text class="sd-subtitle" x="460" y="288" text-anchor="middle">Ubuntu · Intel x86 · NVIDIA RTX 50-series</text>
   <text class="sd-label" x="460" y="309" text-anchor="middle">projects · hardware · information</text>
 
   <!-- Branches from the workstation -->
