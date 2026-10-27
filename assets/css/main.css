@@ -202,3 +202,12 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 :root:not([data-theme="light"]) .chroma .gd { color: #ffdcd7; background-color: #67060c; }
 :root:not([data-theme="light"]) .chroma .gi { color: #aff5b4; background-color: #033a16; }
 }
+
+/* Inline SVG diagrams in posts: the SVG uses the site CSS variables, so
+   one source stays legible under both the light and dark themes. */
+.diagram { margin: 2rem 0; }
+.diagram svg { display: block; width: 100%; height: auto; }
+.diagram figcaption {
+  color: var(--muted); font-size: 0.92rem; line-height: 1.5;
+  margin-top: 0.6rem; text-align: center;
+}

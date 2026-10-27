@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 660" role="img" aria-labelledby="setup-title setup-desc">
+  <title id="setup-title">My AI agent setup</title>
+  <desc id="setup-desc">I reach Muse in the cloud from a phone or the web. Muse reaches my home PC over SSH on Tailscale. The PC runs personal projects, connects to development hardware, and pulls information from five sources. A dashed Termix line connects me directly to the same PC.</desc>
+  <defs>
+    <marker id="setup-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted, #666)"/>
+    </marker>
+    <marker id="setup-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent, #0b5394)"/>
+    </marker>
+  </defs>
+  <style>
+    .sd-node { fill: var(--code-bg, #f7f7f7); stroke: var(--line, #ddd); stroke-width: 1.5; }
+    .sd-node-main { fill: var(--code-bg, #f7f7f7); stroke: var(--accent, #0b5394); stroke-width: 2; }
+    .sd-title { fill: var(--fg, #1a1a1a); font-family: inherit; font-size: 21px; font-weight: 700; }
+    .sd-subtitle { fill: var(--muted, #666); font-family: inherit; font-size: 15px; }
+    .sd-item { fill: var(--fg, #1a1a1a); font-family: inherit; font-size: 16px; }
+    .sd-label { fill: var(--muted, #666); font-family: inherit; font-size: 14px; }
+    .sd-label-accent { fill: var(--accent, #0b5394); font-family: inherit; font-size: 15px; font-weight: 650; }
+    .sd-link { stroke: var(--muted, #666); stroke-width: 2; fill: none; }
+    .sd-link-accent { stroke: var(--accent, #0b5394); stroke-width: 2.25; fill: none; }
+    .sd-dashed { stroke: var(--accent, #0b5394); stroke-width: 2; stroke-dasharray: 8 7; fill: none; }
+  </style>
+
+  <!-- Top layer: person and cloud agent -->
+  <rect class="sd-node" x="35" y="38" width="215" height="100" rx="14"/>
+  <g aria-hidden="true" stroke="var(--muted, #666)" fill="none" stroke-width="1.8">
+    <rect x="99" y="46" width="13" height="24" rx="3"/>
+    <line x1="102.5" y1="65.5" x2="108.5" y2="65.5"/>
+    <rect x="168" y="50" width="24" height="18" rx="3"/>
+    <line x1="168" y1="56" x2="192" y2="56"/>
+    <circle cx="172.5" cy="53" r="1.2" fill="var(--muted, #666)" stroke="none"/>
+    <circle cx="177.5" cy="53" r="1.2" fill="var(--muted, #666)" stroke="none"/>
+  </g>
+  <text class="sd-title" x="142" y="70" text-anchor="middle">Me</text>
+  <text class="sd-subtitle" x="142" y="95" text-anchor="middle">iPhone · Chrome browser</text>
+  <text class="sd-subtitle" x="142" y="117" text-anchor="middle">anytime, anywhere</text>
+
+  <rect class="sd-node-main" x="345" y="38" width="230" height="92" rx="14"/>
+  <text class="sd-title" x="460" y="76" text-anchor="middle">Muse</text>
+  <text class="sd-subtitle" x="460" y="104" text-anchor="middle">cloud · brain + memory</text>
+
+  <path class="sd-link" d="M 250 84 H 337" marker-end="url(#setup-arrow)"/>
+  <text class="sd-label" x="297" y="65" text-anchor="middle">ask · decide</text>
+
+  <!-- Cloud agent to the home workstation -->
+  <path class="sd-link-accent" d="M 460 130 V 217" marker-end="url(#setup-arrow-accent)"/>
+  <text class="sd-label-accent" x="478" y="181">SSH over Tailscale</text>
+
+  <!-- The owner's separate direct line -->
+  <path class="sd-dashed" d="M 142 138 V 273 H 292" marker-end="url(#setup-arrow-accent)"/>
+  <text class="sd-label-accent" x="158" y="196">Termix</text>
+  <text class="sd-label" x="158" y="219">direct line · take over anytime</text>
+
+  <!-- Middle layer: one home workstation -->
+  <rect class="sd-node-main" x="300" y="225" width="320" height="96" rx="14"/>
+  <text class="sd-title" x="460" y="261" text-anchor="middle">Home PC</text>
+  <text class="sd-subtitle" x="460" y="288" text-anchor="middle">Ubuntu · Intel x86 · NVIDIA RTX 50-series</text>
+  <text class="sd-label" x="460" y="309" text-anchor="middle">projects · hardware · information</text>
+
+  <!-- Branches from the workstation -->
+  <path class="sd-link" d="M 460 321 V 375"/>
+  <path class="sd-link" d="M 170 375 H 750"/>
+  <path class="sd-link" d="M 170 375 V 432" marker-end="url(#setup-arrow)"/>
+  <path class="sd-link" d="M 460 375 V 432" marker-end="url(#setup-arrow)"/>
+  <path class="sd-link-accent" d="M 750 432 V 383" marker-end="url(#setup-arrow-accent)"/>
+  <text class="sd-label" x="184" y="408">runs</text>
+  <text class="sd-label" x="474" y="408">connects to</text>
+  <text class="sd-label-accent" x="736" y="408" text-anchor="end">pulls from</text>
+
+  <!-- Personal projects -->
+  <rect class="sd-node" x="35" y="440" width="270" height="180" rx="14"/>
+  <text class="sd-title" x="170" y="476" text-anchor="middle">Personal projects</text>
+  <text class="sd-item" x="58" y="516">tiny-infer — inference engine</text>
+  <text class="sd-item" x="58" y="556">tiny-serve — serving layer</text>
+  <text class="sd-item" x="58" y="596">tiny-cc — C compiler</text>
+
+  <!-- Connected hardware -->
+  <rect class="sd-node" x="325" y="440" width="270" height="180" rx="14"/>
+  <text class="sd-title" x="460" y="476" text-anchor="middle">Connected hardware</text>
+  <text class="sd-item" x="355" y="510">ESP32-C6</text>
+  <text class="sd-item" x="355" y="542">Jetson Orin Nano</text>
+  <text class="sd-item" x="355" y="574">Raspberry Pi Pico</text>
+  <text class="sd-item" x="355" y="606">Radxa Dragon Q6A</text>
+
+  <!-- Information inlets -->
+  <rect class="sd-node" x="615" y="440" width="270" height="180" rx="14"/>
+  <text class="sd-title" x="750" y="476" text-anchor="middle">Information inlets</text>
+  <text class="sd-item" x="645" y="506">Gmail</text>
+  <text class="sd-item" x="645" y="532">X (Twitter)</text>
+  <text class="sd-item" x="645" y="558">Zhihu</text>
+  <text class="sd-item" x="645" y="584">GitHub via gh</text>
+  <text class="sd-item" x="645" y="610">YouTube captions</text>
+</svg>
