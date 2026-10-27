@@ -3,7 +3,7 @@ title: "Addicted to Muse: Brain in the Cloud, Hands on My Home PC"
 date: 2026-10-26
 slug: "ai-agent-setup"
 description: "How my work with Muse is physically arranged: memory and reasoning in the cloud, execution on my home workstation, hardware and information flowing through one PC, and a direct line back in for me."
-draft: true
+draft: false
 ---
 
 I work with Muse as a continuing collaborator. The arrangement is deliberately physical. The brain and memory are in the cloud. The hands are on a workstation in my home. That machine runs my personal software projects, reaches the development hardware on and around my desk, and collects most of the information I ask the agent to watch. I also keep a separate, direct path into the same machine from my phone.
