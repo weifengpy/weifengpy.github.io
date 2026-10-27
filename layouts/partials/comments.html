@@ -1,0 +1,50 @@
+{{/* Comments via giscus (https://giscus.app): backed by this repo's
+     GitHub Discussions, Announcements category, one discussion per post
+     pathname. Theme follows the site theme: the loader hands client.js
+     the current data-theme (light / transparent_dark) and the observer
+     below re-sends it via giscus's postMessage setConfig protocol
+     whenever data-theme changes (header toggle or the time-based auto
+     switch in head.html). */}}
+<section class="comments" aria-label="Comments">
+  <h2>Comments</h2>
+  <div class="giscus"></div>
+  <script>
+  (function () {
+    function giscusTheme() {
+      return document.documentElement.dataset.theme === "dark" ? "transparent_dark" : "light";
+    }
+    var s = document.createElement("script");
+    s.src = "https://giscus.app/client.js";
+    s.async = true;
+    s.crossOrigin = "anonymous";
+    s.setAttribute("data-repo", "weifengpy/weifengpy.github.io");
+    s.setAttribute("data-repo-id", "R_kgDOVTIDmA");
+    s.setAttribute("data-category", "Announcements");
+    s.setAttribute("data-category-id", "DIC_kwDOVTIDmM4DJyE7");
+    s.setAttribute("data-mapping", "pathname");
+    s.setAttribute("data-strict", "0");
+    s.setAttribute("data-reactions-enabled", "1");
+    s.setAttribute("data-emit-metadata", "0");
+    s.setAttribute("data-input-position", "top");
+    s.setAttribute("data-theme", giscusTheme());
+    s.setAttribute("data-lang", "en");
+    s.setAttribute("data-loading", "lazy");
+    document.currentScript.parentNode.querySelector(".giscus").appendChild(s);
+    var sentTheme = null;
+    function syncTheme() {
+      var frame = document.querySelector("iframe.giscus-frame");
+      if (!frame) { return; }
+      var theme = giscusTheme();
+      if (theme === sentTheme) { return; }
+      sentTheme = theme;
+      frame.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: theme } } }, "https://giscus.app");
+    }
+    new MutationObserver(syncTheme).observe(document.documentElement,
+      { attributes: true, attributeFilter: ["data-theme"] });
+    window.addEventListener("message", function (event) {
+      if (event.origin === "https://giscus.app") { syncTheme(); }
+    });
+  })();
+  </script>
+</section>

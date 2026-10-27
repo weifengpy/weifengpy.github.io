@@ -228,3 +228,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   color: var(--muted); font-size: 0.92rem; line-height: 1.5;
   margin-top: 0.6rem; text-align: center;
 }
+
+/* Comments (giscus) at the foot of each post: divider and heading follow
+   the article rhythm; the widget itself inherits the site fonts. */
+.comments {
+  border-top: 1px solid var(--line); margin-top: 2.5rem; padding-top: 1rem;
+}
+.comments h2 { margin: 0 0 0.75rem; font-size: 1.3rem; }
