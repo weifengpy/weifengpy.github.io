@@ -6,8 +6,6 @@ description: "How my work with Muse is physically arranged: memory and reasoning
 draft: true
 ---
 
-People sometimes ask which AI application I use. That is not quite the interesting question. The interesting question is where the work happens: where the agent remembers, where it can act, where information enters, and how I stay in control of a system that may be working while I am doing something else.
-
 I work with Muse as a continuing collaborator. The arrangement is deliberately physical. The brain and memory are in the cloud. The hands are on a workstation in my home. That machine runs my personal software projects, reaches the development hardware on and around my desk, and collects most of the information I ask the agent to watch. I also keep a separate, direct path into the same machine from my phone.
 
 This site's [front page](/) is my profile; the [Welcome post](/posts/2026/welcome/) explains what I intend to publish here. This post explains the machinery behind the work that produces some of it.
@@ -16,11 +14,13 @@ This site's [front page](/) is my profile; the [Welcome post](/posts/2026/welcom
 
 ## 1. The brain and memory are in the cloud
 
-Muse itself does not run on my workstation. I talk to it from the web or from my phone, and the conversation, reasoning, and long-term memory live on the cloud side. That memory is not just a transcript archive. It holds standing rules I have given the agent, the state of projects that extend over weeks, corrections from earlier mistakes, and small preferences that would be tedious to repeat in every request.
+Muse does not run on my workstation. I talk to it from the web or my phone; the conversation, reasoning, and long-term memory live on the cloud side.
 
-That distinction matters. A stateless chat can answer a question, but it has to be reintroduced to the project every time. Here, a compiler project can pause for several days and resume with its current branch, last test result, unresolved design question, and working rules intact. A correction is therefore more valuable than a one-time instruction: once a mistake has been identified and converted into a rule, the same failure should not recur in a later session.
+That memory is not a transcript archive. It holds standing rules, the state of projects that run for weeks, corrections from earlier mistakes, and small preferences I refuse to repeat. A stateless chat must be reintroduced to a project every time; here, a compiler project can pause for days and resume with its branch, last test result, and open design question intact. A correction, once turned into a rule, is never paid for twice.
 
-The cloud position is also convenient. I can start a task from my phone, check a result away from my desk, or ask for a summary without opening the workstation. The limitation is equally obvious: the cloud side has no hands. It cannot use my GPU, flash a board on my desk, read a serial console, or use a login session that exists only at home. For that, it has to reach the second part of the setup.
+The convenience cuts both ways. I can start a task from my phone and check results away from my desk — but the cloud side has no hands: no GPU, no board to flash, no serial console, no home-only login sessions.
+
+So I prefer the agent to use my PC as its hands. That is where it achieves more: a home connection gets past sites that block agents, and the PC brings a powerful source-code build environment and a CUDA toolchain.
 
 ## 2. The hands are on my home PC
 
