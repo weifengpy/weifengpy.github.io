@@ -66,9 +66,3 @@ I do not reach the workstation only through Muse. On my phone, I use Termix to c
 - **Inspect** — anything the agent claims to have started, changed, or finished, I can check directly: read the log, verify the result.
 - **Take over** — I can stop a job, finish an operation in person, or take a terminal over mid-task.
 - **Boundaries** — passwords and similar secrets are entered by me, never relayed through the agent; crossing a boundary that requires my credentials or judgment remains my action.
-
-This is not a lack of trust in automation. It is what makes a high degree of automation reasonable: the system is observable and reversible, and my direct path does not depend on the agent reporting on itself.
-
-## A follow-up
-
-What this does not describe is how I work with the agent on that stage — task phrasing, decision division, and result checks. Those working patterns belong in a follow-up.
