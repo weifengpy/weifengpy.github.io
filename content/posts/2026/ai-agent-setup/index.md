@@ -8,8 +8,6 @@ draft: false
 
 I work with Muse as a continuing collaborator. The arrangement is deliberately physical. The brain and memory are in the cloud. The hands are on a workstation in my home. That machine runs my personal software projects, reaches the development hardware on and around my desk, and collects most of the information I ask the agent to watch. I also keep a separate, direct path into the same machine from my phone.
 
-This site's [front page](/) is my profile; the [Welcome post](/posts/2026/welcome/) explains what I intend to publish here. This post explains the machinery behind the work that produces some of it.
-
 {{< diagram src="fig-setup.svg" alt="Diagram of the setup: I contact Muse in the cloud from a phone or the web; Muse connects over SSH on Tailscale to my home PC; the PC runs tiny-infer, tiny-serve, and tiny-cc, connects to an ESP32-C6, Jetson Orin Nano, Raspberry Pi Pico, and Radxa Dragon Q6A, and pulls information from Gmail, X, Zhihu, GitHub, and YouTube; a dashed Termix line runs directly from me to the home PC." caption="The setup at a glance: one cloud agent, one home workstation, and two ways for me to reach that workstation — through the agent or directly." >}}
 
 ## 1. The brain and memory are in the cloud
