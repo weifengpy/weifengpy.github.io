@@ -12,11 +12,11 @@
   <style>
     .sd-node { fill: var(--code-bg, #f7f7f7); stroke: var(--line, #ddd); stroke-width: 1.5; }
     .sd-node-main { fill: var(--code-bg, #f7f7f7); stroke: var(--accent, #0b5394); stroke-width: 2; }
-    .sd-title { fill: var(--fg, #1a1a1a); font-family: inherit; font-size: 21px; font-weight: 700; }
-    .sd-subtitle { fill: var(--muted, #666); font-family: inherit; font-size: 15px; }
-    .sd-item { fill: var(--fg, #1a1a1a); font-family: inherit; font-size: 16px; }
-    .sd-label { fill: var(--muted, #666); font-family: inherit; font-size: 14px; }
-    .sd-label-accent { fill: var(--accent, #0b5394); font-family: inherit; font-size: 15px; font-weight: 650; }
+    .sd-title { fill: var(--fg, #1a1a1a); font-family: inherit; font-size: 14.5px; font-weight: 700; }
+    .sd-subtitle { fill: var(--muted, #666); font-family: inherit; font-size: 12.5px; }
+    .sd-item { fill: var(--fg, #1a1a1a); font-family: inherit; font-size: 13px; }
+    .sd-label { fill: var(--muted, #666); font-family: inherit; font-size: 11.5px; }
+    .sd-label-accent { fill: var(--accent, #0b5394); font-family: inherit; font-size: 12px; font-weight: 650; }
     .sd-link { stroke: var(--muted, #666); stroke-width: 2; fill: none; }
     .sd-link-accent { stroke: var(--accent, #0b5394); stroke-width: 2.25; fill: none; }
     .sd-dashed { stroke: var(--accent, #0b5394); stroke-width: 2; stroke-dasharray: 8 7; fill: none; }
