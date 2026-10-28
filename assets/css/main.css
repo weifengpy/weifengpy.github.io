@@ -229,6 +229,23 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   margin-top: 0.6rem; text-align: center;
 }
 
+/* ---- Wide screens (1024px and up): roomier posts pages ----------------
+   Only the posts list and single posts widen; the home page keeps the
+   46rem column above. A post diagram breaks out of the text column and
+   centers on the viewport so its labels stay legible on large displays.
+   The narrow-screen rules elsewhere in this file are untouched. */
+@media (min-width: 1024px) {
+  body.page-section.section-posts { max-width: 70rem; }
+  body.page-page.section-posts { max-width: 52rem; }
+  .post-thumb { flex: 0 0 350px; }
+  body.section-posts .diagram {
+    width: min(1064px, calc(100vw - 2rem));
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 /* Comments (giscus) at the foot of each post: divider and heading follow
    the article rhythm; the widget itself inherits the site fonts. */
 .comments {
